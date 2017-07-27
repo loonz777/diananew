@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/loonz777/diananew/issues"
   },
-  "homepage": "https://github.com/loonz777/diananew#readme"
+  "homepage": "https://github.com/loonz777/diananew#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
 }

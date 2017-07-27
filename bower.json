@@ -1,0 +1,22 @@
+{
+  "name": "1diana",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "loonz777 <marcis.kravalis@inox.lv>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/loonz777/diananew",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5"
+  }
+}
