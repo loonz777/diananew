@@ -1,12 +1,12 @@
 {
-  "name": "1diana",
-  "description": "",
+  "name": "dianagloster",
+  "description": "DIana Gloster WEBSITE",
   "main": "index.js",
   "authors": [
-    "loonz777 <marcis.kravalis@inox.lv>"
+    "M Kravalis"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/loonz777/diananew",
+  "homepage": "https://github.com/AlexMcDee/Diana",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -17,6 +17,8 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "angular": "^1.6.5",
-    "angular-route": "^1.6.5"
+    "angular-route": "^1.6.5",
+    "a0-angular-storage": "^0.0.15",
+    "angular-cookies": "^1.6.5"
   }
 }

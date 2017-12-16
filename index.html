@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html ng-app="DianaWeb">
+<head>
+
+    <title>Diana Gloster Webpage</title>
+    <base href="/"> <!-- needed for Angular HTML5 mode -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/a0-angular-storage/dist/angular-storage.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <!-- Custom ScrollBar -->
+    <script src="bower_components/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <!--<div class="content"> -->
+    <!-- navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myList"
+                        aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"> Diana Gloster </a>
+            </div>
+            <div id="myList" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/aboutme">About me</a></li>
+                    <li><a href="/photos">Photo gallery</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Media<span class="caret"></span></a>
+                        <ul class="dropdown-menu inverse-dropdown" id="drop">
+                            <li><a href="/buy">Buy my music</a></li>
+                            <li><a href="/free">Free downloads</a></li>
+                            <li><a href="/video">Video</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Social media<span class="caret"></span></a>
+                        <ul class="dropdown-menu inverse-dropdown" id="drop">
+                            <li><a href="https://www.instagram.com/dianagloster/" target="_blank">Instagram</a></li>
+                            <li><a href="https://www.youtube.com/user/Justdlady" target="_blank">YouTube</a></li>
+                            <li><a href="https://twitter.com/dianagloster" target="_blank">Twitter</a></li>
+                            <li><a href="https://www.facebook.com/dianaglosterofficial/"
+                                   target="_blank">Facebook</a></li>
+                        </ul>
+                    </li>
+                    <li ng-if="auth == false" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Log in<span class="caret"></span></a>
+                        <ul class="dropdown-menu inverse-dropdown">
+                            <li><a href="/login">Log in</a></li>
+                            <li><a href="/register">Register</a></li>
+                        </ul>
+                    </li>
+                    <li ng-if="auth" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">{{authUser.username}}<span class="caret"></span></a>
+                        <ul class="dropdown-menu inverse-dropdown">
+                            <li><a href="/account">Account</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }"
+         ng-if="flash" ng-bind="flash.message"></div>
+    <div ng-view></div>
+</div>
+<script src="app.js"></script>
+<script src="app/services/authentication.service.js"></script>
+<script src="app/services/flash.service.js"></script>
+
+<script src="app/directives/body.js"></script>
+
+<!-- Local Storage service -->
+<script src="app/services/user.service.local-storage.js"></script>
+
+<script src="app/controllers/home.controller.js"></script>
+<script src="app/controllers/login.controller.js"></script>
+<script src="app/controllers/register.controller.js"></script>
+<script src="app/controllers/logout.controller.js"></script>
+<script src="app/controllers/account.controller.js"></script>
+<script src="app/controllers/free.controller.js"></script>
+</body>
+</html>

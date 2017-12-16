@@ -1,0 +1,256 @@
+body {
+    padding-top: 80px;
+    font-family: 'Dosis', sans-serif;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background-image: url('../pics/background2.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+body.home-page:before {
+    background-image: url('../pics/home2.jpg');
+}
+
+.content {
+    overflow: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+
+/*navbar color*/
+.navbar-default {
+    background-color: #fa2371;
+    border-color: #fe8cb8;
+}
+
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-text {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu {
+    background-color: #fa2371;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: #fe8cb8;
+}
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+    background-color: #fe8cb8;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #fe8cb8;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #fe8cb8;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background-color: #fe8cb8;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fe8cb8;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #fe8cb8;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #ffffff;
+}
+
+.navbar-default .navbar-link {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-link:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffffff;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ffffff;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ffffff;
+        background-color: #fe8cb8;
+    }
+}
+
+/*photos*/
+.gal {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
+.gal img {
+    width: 100%;
+    padding: 7px 0;
+}
+
+@media (max-width: 500px) {
+    .gal {
+        -webkit-column-count: 1; /* Chrome, Safari, Opera */
+        -moz-column-count: 1; /* Firefox */
+        column-count: 1;
+    }
+}
+
+/* youtube */
+.auto-resizable-iframe {
+    max-width: 1080px;
+    max-height: auto;
+    margin: 0px auto;
+}
+
+.auto-resizable-iframe > div {
+    position: relative;
+    padding-bottom: 55%; /* <-- to resize video box */
+    height: 0px;
+}
+
+.auto-resizable-iframe iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/*about artist*/
+
+#aboutme {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    font-size: 150%;
+}
+
+/*free downloads*/
+.panel {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.panel-heading {
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.free {
+    font-size: 150%;
+}
+
+/*
+* https://scotch.io/tutorials/customize-the-browsers-scrollbar-with-css
+* https://css-tricks.com/almanac/properties/s/scrollbar/
+* http://www.hongkiat.com/blog/css-scroll-bar/
+*/
+
+/*IE test*/
+body {
+    scrollbar-face-color: #fa2371;
+    scrollbar-shadow-color: #2D2C4D;
+    scrollbar-highlight-color: #7D7E94;
+    scrollbar-3dlight-color: #7D7E94;
+    scrollbar-darkshadow-color: #2D2C4D;
+    scrollbar-track-color: #7D7E94;
+    scrollbar-arrow-color: #C1C1D1;
+}
+/* WebKit */
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+    background-color: #F3F3F3;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+    background-color: #fa2371;
+}
+
+/* black thin scrollbar*/
+/*body::-webkit-scrollbar-track*/
+/*{*/
+/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+/*background-color: #F5F5F5;*/
+/*}*/
+
+/*body::-webkit-scrollbar*/
+/*{*/
+/*width: 6px;*/
+/*background-color: #F5F5F5;*/
+/*}*/
+
+/*body::-webkit-scrollbar-thumb*/
+/*{*/
+/*background-color: #000000;*/
+/*}*/
